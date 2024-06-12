@@ -1,0 +1,36 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [
+		"secret_key"
+	],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"secret_key":{
+			"bsonType": "string",
+			"description": "外键 与唯一登录秘钥关联",
+			"foreignKey": "secret.secret_key" 
+		},
+		"english_list":{
+			"bsonType": "array",
+			"description": "本次背诵列表",
+			"title": "单词列表"
+		},
+		"create_time": {
+			"bsonType": "timestamp",
+			"description": "背诵时间",
+			"defaultValue": {
+				"$env": "now"
+			} 
+		}
+		
+	}
+}

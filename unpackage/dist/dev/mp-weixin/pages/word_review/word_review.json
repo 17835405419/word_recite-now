@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "单词复习",
+  "usingComponents": {
+    "word-card": "/components/WordCard/WordCard"
+  }
+}

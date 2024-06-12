@@ -1,0 +1,79 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+	    ,{
+            "path" : "pages/word_input/word_input",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "单词输入",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/word_memorize/word_memorize",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "定时记忆",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/word_read/word_read",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "单词速记",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/word_repeat/word_repeat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "单词复习",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/word_list/word_list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "背诵列表",
+                "enablePullDownRefresh": false
+
+            }
+            
+        },
+        {
+        	"path" : "pages/word_review/word_review",
+        	"style" : 
+        	{
+        		"navigationBarTitleText" : "单词复习"
+        	}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "背倍佳",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"iconPath": "/static/tabberIcon/home.png",
+				"selectedIconPath": "static/tabberIcon/home_.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
