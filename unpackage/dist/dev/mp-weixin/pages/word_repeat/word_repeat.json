@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "单词复习",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
-    "word-card": "/components/WordCard/WordCard"
-  }
-}
