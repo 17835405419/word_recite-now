@@ -1,4 +1,5 @@
 <script>
+	import store from "@/store/index.js"
 	export default {
 		 data(){
 			return{
@@ -6,7 +7,6 @@
 			}
 		},
 		onLaunch: function() {
-			
 		},
 		onShow: function() {
 			 if (this.isBackground) {
@@ -19,7 +19,10 @@
 			    }
 		},
 		onHide: function() {
+
 			 this.isBackground = true; // 应用进入后台时设置标志
+			 // 存储当前背诵的单词 
+			 uni.setStorageSync("recover",store.state.wordInfoList)
 		},
 
 	}

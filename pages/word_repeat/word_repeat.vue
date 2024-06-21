@@ -89,7 +89,8 @@
 					this.$store.commit("deleteWordList")
 					// 清除 单词列表的缓存
 					uni.removeStorageSync("historyLists")
-					// 跳转
+					// 清除 恢复单词列表缓存
+					uni.removeStorageSync("recover")
 
 					// 跳转至首页
 					uni.reLaunch({

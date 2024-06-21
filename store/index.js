@@ -11,6 +11,10 @@ const store = new Vuex.Store({
 		secret_key:uni.getStorageSync("secret_key") ||  ""
 	},
 	mutations:{
+		// 恢复历史背诵
+		recoverWordList(state,wordList){
+			state.wordInfoList = wordList
+		},
 		ListPush(state,wordInfo){
 			// 为列表数据赋值
 			state.wordInfoList.push(wordInfo)

@@ -36,6 +36,8 @@
 		},
 		onLoad(e) {
 			this.obj = JSON.parse(e.obj)
+			// 存储至vuex列表
+			this.$store.commit("ListPush", this.obj)
 		},
 		onShow() {
 			var animation = uni.createAnimation({
@@ -44,7 +46,7 @@
 				timingFunction: 'ease',
 			})
 			this.animation = animation
-
+			
 		},
 
 		methods: {
@@ -65,8 +67,6 @@
 					icon: "none"
 				})
 
-				// 存储至vuex列表
-				this.$store.commit("ListPush", this.obj)
 
 				// 如果vuex 存储的数据 > 1 表明需要从第一个开始往后复习
 				if (this.$store.state.wordInfoList.length > 1) {
@@ -109,7 +109,8 @@
 					this.$store.commit("deleteWordList")
 					// 清除 单词列表的缓存
 					uni.removeStorageSync("historyLists")
-
+					// 清除 恢复单词列表缓存
+					uni.removeStorageSync("recover")
 
 					// 跳转
 

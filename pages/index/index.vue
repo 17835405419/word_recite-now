@@ -149,6 +149,26 @@
 					}
 					return
 				}
+				
+				// 判断是否有未背诵的
+				const recover = uni.getStorageSync("recover")
+				const isRecover = recover.length == 0 ? false : true
+				if(isRecover){
+					// 有没背完的
+					const {
+						confirm
+					} = await uni.showModal({
+						title: "您之前还有未背完的单词，是否继续？",
+					})
+					if(confirm){
+						this.$store.commit("recoverWordList",recover)
+						uni.reLaunch({
+							url: "/pages/word_input/word_input"
+						})
+						return
+					}
+				}
+				// 开始背单词
 				const {
 					confirm
 				} = await uni.showModal({
@@ -159,8 +179,6 @@
 						url: "/pages/word_input/word_input"
 					})
 				}
-
-
 			},
 
 
